@@ -9,9 +9,8 @@ TARGET = print
 OBJ = myprintf.o test_myprintf.o
 
 all: $(TARGET)
-
 $(TARGET): $(OBJ)
-	$(CC)  $(OBJ) -o $(TARGET) $(SANITIZE)
+	$(CC)  $(OBJ) -o $(TARGET) $(SANITIZE) -no-pie
 
 myprintf.o: myprintf.asm
 	$(ASM) $(ASMFLAGS) -o myprintf.o myprintf.asm
