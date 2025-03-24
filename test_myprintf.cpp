@@ -5,11 +5,12 @@ extern "C" void _my_print(const char* buffer, ...);
 int main()
 {
 char c = 'T';
-char string1[11] = "wiwiwiwiwi";
-char string2[10] = "#$%^*ghFG";
+char string1[11] = "STRING1";
+char string2[10] = "STRING2";
 
-printf("SSSS%c om%d | %x %sg hihi%%h%sih\n", c, 91, 1234354, string1, string2);
-_my_print("hello%c om%d | %x %sg hihi%%h%sih %d %d\n", c, 9, 34, string1, string2, 9, 2);
+printf(   "hello %c om%d | %x %s hihi %% hih %o\n", c, 9, 123456789, string1, 12);
+
+_my_print("hello %c om%d | %x %s hihi %% hih %o\n", c, 9, 123456789, string1, 12);
 return 0;
 }
 
